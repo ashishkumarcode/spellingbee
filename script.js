@@ -29,12 +29,16 @@ function pronounce(phrase) {
   window.speechSynthesis.speak(utterance);
 }
 
+function repeat() {
+  pronounce(word);
+}
+
 // function to check if the user's guess is correct
 function checkGuess() {
   // get the user's guess
   var guess = document.getElementById("guess").value;
   // check if the guess is correct
-  if (guess.toLowerCase() === word.toLowerCase()) {
+  if (guess.trim().toLowerCase() === word.toLowerCase()) {
     // if the guess is correct, display the word and read a message
     document.getElementById("result").innerHTML = word;
     pronounce("Correct!");
@@ -46,6 +50,7 @@ function checkGuess() {
     incorrectWordCount++;
     incorrectWords.push(word);
   }
+  document.getElementById("guess").value = "";
   document.getElementById("score").innerHTML =
     "Score: " + correctWordCount + "<br>Wrong: " + incorrectWordCount;
 }
