@@ -35,7 +35,8 @@ function checkGuess() {
   var guess = document.getElementById("guess").value;
   // check if the guess is correct
   if (guess.toLowerCase() === word.toLowerCase()) {
-    // if the guess is correct, read a message
+    // if the guess is correct, display the word and read a message
+    document.getElementById("result").innerHTML = word;
     pronounce("Correct!");
     correctWordCount++;
   } else {
@@ -45,7 +46,8 @@ function checkGuess() {
     incorrectWordCount++;
     incorrectWords.push(word);
   }
-  document.getElementById("score").innerHTML = "Score: " + correctWordCount;
+  document.getElementById("score").innerHTML =
+    "Score: " + correctWordCount + "<br>Wrong: " + incorrectWordCount;
 }
 
 // function to fetch the meaning of a word
