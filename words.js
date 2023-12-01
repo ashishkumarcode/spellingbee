@@ -270,7 +270,7 @@ var words = [
   "rotten",
   "insulation",
   "awfully",
-  "qmp",
+  "quip",
   "expressway",
   "intertwine",
   "manual",
