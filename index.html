@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  
-  <button onclick="pronounceWord()">Say It</button>
-  <button onclick="fetchMeaning()">Meaning?</button>
-  <input id="guess" type="text">
-  <button onclick="checkGuess()">Check</button>
-  <div id="result"></div>
-  <script src="script.js"></script>
-
-</body>
-
+  <body class="bg-slate-50 min-h-screen flex flex-col">
+    <header class="text-3xl font-bold bg-[#f7da21] py-5 text-center">
+      Spelling Bee
+    </header>
+    <main class="container mx-auto flex flex-col items-stretch flex-grow">
+      <section class="container mx-auto flex flex-col flex-grow">
+        <div
+          id="result"
+          class="flex-grow grid place-items-center text-6xl text-green-900"
+        ></div>
+      </section>
+      <section id="word-section" class="container mx-auto flex flex-col">
+        <button
+          onclick="pronounceWord()"
+          class="bg-slate-700 border border-slate-50 text-white m-3 py-3 px-2 font-semibold"
+        >
+          Next Word
+        </button>
+        <button
+          onclick="fetchMeaning()"
+          class="bg-slate-50 border border-slate-700 text-slate-900 m-3 py-3 px-2 font-semibold"
+        >
+          Meaning?
+        </button>
+      </section>
+      <section
+        id="guess-section"
+        class="container mx-auto flex flex-row py-3 px-[13px]"
+      >
+        <input
+          id="guess"
+          type="text"
+          class="flex-1 px-3 shadow-inner ring-1 ring-slate-700 ring-inset"
+          placeholder="Type here..."
+        />
+        <button
+          onclick="checkGuess()"
+          class="flex-none bg-slate-700 border border-slate-700 text-white py-3 px-5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            />
+          </svg>
+        </button>
+      </section>
+      <section
+        id="score-section"
+        class="min-h-[25vh] container mx-auto flex flex-col flex-grow"
+      >
+        <div
+          id="score"
+          class="flex-grow grid place-items-center text-2xl text-slate-900 font-semibold"
+        ></div>
+      </section>
+    </main>
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
