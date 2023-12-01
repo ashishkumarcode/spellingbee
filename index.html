@@ -6,7 +6,7 @@
     <link href="dist/style.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-slate-50 min-h-screen flex flex-col">
+  <body class="bg-slate-50 flex flex-col">
     <header class="text-3xl font-bold bg-[#f7da21] py-5 text-center">
       Spelling Bee
     </header>
@@ -14,7 +14,7 @@
       <section class="container mx-auto flex flex-col flex-grow">
         <div
           id="result"
-          class="flex-grow grid place-items-center text-6xl text-green-900"
+          class="min-h-[150px] flex-grow grid place-items-center text-6xl text-green-900"
         ></div>
       </section>
       <section id="word-section" class="container mx-auto flex flex-col">
@@ -44,10 +44,13 @@
         <input
           id="guess"
           type="text"
+          onchange="enableCheck(true)"
           class="flex-1 px-3 shadow-inner ring-1 ring-slate-700 ring-inset"
           placeholder="Type here..."
         />
         <button
+          id="check"
+          disabled
           onclick="checkGuess()"
           class="flex-none bg-slate-700 border border-slate-700 text-white py-3 px-5"
         >
@@ -69,7 +72,7 @@
       </section>
       <section
         id="score-section"
-        class="min-h-[25vh] container mx-auto flex flex-col flex-grow"
+        class="min-h-fit container mx-auto flex flex-col flex-grow"
       >
         <div
           id="score"
