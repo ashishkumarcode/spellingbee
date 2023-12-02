@@ -47,6 +47,7 @@ function checkGuess() {
     // if the guess is correct, display the word and read a message
     document.getElementById("result").innerHTML = word;
     pronounce("Correct!");
+    word = "";
     correctWordCount++;
   } else {
     // if the guess is incorrect, display the correct word and read a message
