@@ -7,10 +7,6 @@ var correctWordCount = 0,
   incorrectWords = [],
   usedWords = [];
 
-function enableCheck(bool) {
-  document.getElementById("check").disabled = !bool;
-}
-
 // function pronounceWord to re-assign the word variable and pronounce it
 function pronounceWord() {
   word = "";
@@ -42,7 +38,6 @@ function repeat() {
 function checkGuess() {
   // get the user's guess
   var guess = document.getElementById("guess").value;
-  enableCheck(false);
 
   if (guess.trim() === "" || word === "") {
     return;
