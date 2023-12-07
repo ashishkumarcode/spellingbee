@@ -7,6 +7,26 @@ var correctWordCount = 0,
   incorrectWords = [],
   usedWords = [];
 
+var parentModeOn = false;
+var words = rootWords;
+
+function parentModeChanged(e) {
+  parentModeOn = !!e.srcElement.checked;
+  if (parentModeOn) {
+    document.getElementById("guess-section").style.display = "none";
+    document.getElementById("page-section").style.display = "flex";
+    pageChosen(1);
+  } else {
+    document.getElementById("guess-section").style.display = "flex";
+    document.getElementById("page-section").style.display = "none";
+    words = rootWords;
+  }
+}
+
+function pageChosen(page) {
+  words = pageWords[page - 1];
+}
+
 // function pronounceWord to re-assign the word variable and pronounce it
 function pronounceWord() {
   word = "";
@@ -19,6 +39,7 @@ function pronounceWord() {
       usedWords.push(word);
       // pronounce the word
       pronounce(word);
+      if (parentModeOn) document.getElementById("result").innerHTML = word;
       break;
     }
   }
