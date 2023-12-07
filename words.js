@@ -1,4 +1,4 @@
-var words = [
+var rootWords = [
   "sky",
   "later",
   "river",
@@ -461,3 +461,27 @@ var words = [
   "pipette",
   "coccidiosis",
 ];
+
+var pageWords = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+for (var i = 0; i < rootWords.length; i++) {
+  var j = i % 16;
+  pageWords[j].push(rootWords[i]);
+}
