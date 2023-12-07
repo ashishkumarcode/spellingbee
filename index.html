@@ -10,12 +10,205 @@
     <header class="text-3xl font-bold bg-[#f7da21] py-5 text-center">
       Spelling Bee
     </header>
+    <nav class="container mx-auto text-2xl flex justify-end">
+      <div class="flex gap-3 py-3 items-center">
+        <input
+          id="parentMode"
+          class="w-6 h-6 accent-slate-900"
+          type="checkbox"
+          onchange="parentModeChanged(event)"
+        /><label for="parentMode" class="mr-3">Parent Mode</label>
+      </div>
+    </nav>
     <main class="container mx-auto flex flex-col items-stretch flex-grow">
       <section class="container mx-auto flex flex-col flex-grow">
         <div
           id="result"
           class="min-h-[150px] flex-grow grid place-items-center text-6xl text-green-900"
         ></div>
+      </section>
+      <section id="page-section" class="container mx-auto hidden flex-wrap">
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page1"
+            onclick="pageChosen(1)"
+            checked
+            value="1"
+          /><label for="page1">Col 1</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page2"
+            onclick="pageChosen(2)"
+            value="2"
+          /><label for="page1">Col 2</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page3"
+            onclick="pageChosen(3)"
+            value="3"
+          /><label for="page1">Col 3</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page4"
+            onclick="pageChosen(4)"
+            value="4"
+          /><label for="page1">Col 4</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page5"
+            onclick="pageChosen(5)"
+            value="5"
+          /><label for="page1">Col 5</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page6"
+            onclick="pageChosen(6)"
+            value="6"
+          /><label for="page1">Col 6</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page7"
+            onclick="pageChosen(7)"
+            value="7"
+          /><label for="page1">Col 7</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page8"
+            onclick="pageChosen(8)"
+            value="8"
+          /><label for="page1">Col 8</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page9"
+            onclick="pageChosen(9)"
+            value="9"
+          /><label for="page1">Col 9</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page10"
+            onclick="pageChosen(10)"
+            value="10"
+          /><label for="page1">Col 10</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page12"
+            onclick="pageChosen(12)"
+            value="12"
+          /><label for="page1">Col 12</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page13"
+            onclick="pageChosen(13)"
+            value="13"
+          /><label for="page1">Col 13</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page14"
+            onclick="pageChosen(14)"
+            value="14"
+          /><label for="page1">Col 14</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page15"
+            onclick="pageChosen(15)"
+            value="15"
+          /><label for="page1">Col 15</label>
+        </div>
+        <div
+          class="border rounded border-slate-700 text-slate-900 m-3 py-2 px-3 font-semibold flex gap-2"
+        >
+          <input
+            type="radio"
+            name="pages"
+            class="accent-slate-900"
+            id="page16"
+            onclick="pageChosen(16)"
+            value="16"
+          /><label for="page1">Col 16</label>
+        </div>
       </section>
       <section id="word-section" class="container mx-auto flex flex-col">
         <button
