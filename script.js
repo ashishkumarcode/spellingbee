@@ -8,7 +8,23 @@ var correctWordCount = 0,
   usedWords = [];
 
 var parentModeOn = false;
-var words = rootWords;
+var words = pageWords[0].concat(
+  pageWords[1],
+  pageWords[2],
+  pageWords[3],
+  pageWords[4],
+  pageWords[5],
+  pageWords[6],
+  pageWords[7],
+  pageWords[8],
+  pageWords[9],
+  pageWords[10],
+  pageWords[11],
+  pageWords[12],
+  pageWords[13],
+  pageWords[14],
+  pageWords[15]
+);
 
 function parentModeChanged(e) {
   parentModeOn = !!e.srcElement.checked;
