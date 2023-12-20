@@ -366,7 +366,7 @@ var rootWords = [
   "decibels",
   "quarry",
   "jeopardy",
-  "Taoism"'
+  "Taoism",
   "repose",
   "kungfu",
   "sauna",
