@@ -49,7 +49,7 @@ function pronounceWord() {
   word = "";
   document.getElementById("result").innerHTML = word;
   document.getElementById("guess").value = word;
-  if (([...new Set(words)].length = usedWords.length)) {
+  if ([...new Set(words)].length == usedWords.length) {
     pronounce("All Done!");
   }
   while (true) {
