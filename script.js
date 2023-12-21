@@ -41,6 +41,7 @@ function parentModeChanged(e) {
 
 function pageChosen(page) {
   words = pageWords[page - 1];
+  usedWords = [];
 }
 
 // function pronounceWord to re-assign the word variable and pronounce it
@@ -48,6 +49,9 @@ function pronounceWord() {
   word = "";
   document.getElementById("result").innerHTML = word;
   document.getElementById("guess").value = word;
+  if (([...new Set(words)].length = usedWords.length)) {
+    pronounce("All Done!");
+  }
   while (true) {
     // get a random word from the array
     word = words[Math.floor(Math.random() * words.length)];
